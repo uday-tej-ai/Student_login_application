@@ -7,7 +7,7 @@ app.secret_key = "SAY_MY_NAME!"
 student_d = {}
 
 
-@app.route('/welcome')
+@app.route('/')
 def welcome():
     # If the user is already logged in, send them straight to the dashboard
     if 'user' in session:
