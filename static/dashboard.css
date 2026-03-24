@@ -1,0 +1,126 @@
+:root {
+    --primary: #2563eb;
+    --bg-light: #f9fafb;
+    --sidebar-dark: #1f2937;
+    --text-main: #111827;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-light);
+}
+
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #374151;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links li a i {
+    margin-right: 10px;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    background-color: #374151;
+    color: white;
+    border-left: 4px solid var(--primary);
+}
+
+.logout-item {
+    margin-top: auto;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.top-header h2 span {
+    color: var(--primary);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.stat-card i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-right: 1rem;
+}
+
+.stat-card h4 {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content-body {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.announcement {
+    background: #eff6ff;
+    padding: 1rem;
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+}

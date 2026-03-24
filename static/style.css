@@ -1,0 +1,69 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #111827;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-register {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #1d4ed8;
+}

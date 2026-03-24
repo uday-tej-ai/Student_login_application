@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Portal</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="#"><i class="fas fa-graduation-cap"></i> Grades</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                <li class="logout-item"><a href="{{ url_for('logout') }}" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2>Welcome Back, <span>{{ student }}</span>!</h2>
+                <div class="date-display" id="current-date"></div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <div>
+                        <h4>Attendance</h4>
+                        <p>92%</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                        <h4>Assignments</h4>
+                        <p>4 Pending</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h4>GPA</h4>
+                        <p>3.8</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-body">
+                <h3>Recent Announcements</h3>
+                <div class="announcement">
+                    <p><strong>Exam Schedule:</strong> The Mid-term schedule for the Commerce department has been released.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+<a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    <script>
+        document.getElementById('current-date').innerText = new Date().toDateString();
+    </script>
+</body>
+</html>
