@@ -7,6 +7,12 @@ app.secret_key = "SAY_MY_NAME!"
 student_d = {}
 
 
+@app.route('/welcome')
+def welcome():
+    # If the user is already logged in, send them straight to the dashboard
+    if 'user' in session:
+        return redirect(url_for('dashboard'))
+    return render_template("welcome.html")
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'POST':
