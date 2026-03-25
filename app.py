@@ -30,7 +30,6 @@ def register():
         conn = get_db_connection()
         cursor = conn.cursor()
 
-        # Fix: Check the database for existing user, not the empty dictionary
         cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
         if cursor.fetchone():
             conn.close()  # Always close before returning
@@ -38,7 +37,7 @@ def register():
 
         cursor.execute("INSERT INTO users (username, email, password) VALUES (?, ?, ?)", (username, email, password))
         conn.commit()
-        conn.close()  # FIX: This releases the lock so Login can work
+        conn.close()
 
         return redirect(url_for('login'))
 
@@ -51,7 +50,6 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        # Fix: Check the Database, because student_d is always empty on restart
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
