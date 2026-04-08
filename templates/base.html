@@ -27,7 +27,13 @@
     </div>
 
 <style>
- /* Center the flash message at the top */
+    .user-avatar {
+        width: 60px;           /* Set a fixed width */
+        height: 60px;          /* Set a fixed height (must match width for a circle) */
+        border-radius: 50%;    /* Makes it a perfect circle */
+        object-fit: cover;     /* CRITICAL: crops the image so it doesn't look squashed */
+        border: 2px solid #007bff;
+}
 .flash {
     padding: 12px;
     margin: 10px auto;      /* "auto" centers it horizontally */
